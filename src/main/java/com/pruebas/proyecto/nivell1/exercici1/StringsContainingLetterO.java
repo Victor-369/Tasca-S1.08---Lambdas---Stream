@@ -9,6 +9,10 @@ public class StringsContainingLetterO {
         this.listStrings = listString;
     }
 
+    public List<String> getListStrings() {
+        return listStrings;
+    }
+
     public List<String> getStringsContainingLetterO() {
         return listStrings.stream()
                 .filter(string -> string.toLowerCase().contains("o"))
