@@ -16,6 +16,7 @@ Solutions are organised by level and exercise under `src/main/java`. Tests are u
 | [Level 1, Exercise 1](src/main/java/com/pruebas/proyecto/nivell1/exercici1/README.md) | Find strings containing the letter `o`. |
 | [Level 1, Exercise 2](src/main/java/com/pruebas/proyecto/nivell1/exercici2/README.md) | Find strings containing the letter `o` and more than five letters. |
 | [Level 1, Exercise 3](src/main/java/com/pruebas/proyecto/nivell1/exercici3/README.md) | Print the names of the months using a lambda. |
+| [Level 1, Exercise 4](src/main/java/com/pruebas/proyecto/nivell1/exercici4/README.md) | Print the names of the months using a method reference. |
 
 ## Build and test
 
