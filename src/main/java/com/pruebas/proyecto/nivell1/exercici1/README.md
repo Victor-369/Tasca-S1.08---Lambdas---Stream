@@ -9,7 +9,7 @@ Given a list of strings, return all the strings that contain the letter `o` and 
 `StringsContainingLetterO.getStringsContainingLetterO` uses the Stream API to filter the input list. It converts each string 
 to lower case before checking for `o`, so strings containing either `o` or `O` are included. The method preserves the order of matching strings.
 
-`Main` demonstrates the solution with a sample list. Its output is:
+`MonthsListTest` demonstrates the solution with a sample list. Its output is:
 
 ```text
 [Hello, Two, Holidays, Smartphone]

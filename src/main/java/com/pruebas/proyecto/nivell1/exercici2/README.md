@@ -8,7 +8,7 @@ As in the previous exercise, return all strings that contain the letter `o`, but
 
 `StringsWithOAndMoreThanFiveLetters.getStringsContainingLetterO` uses the Stream API to apply both conditions to the input list. It converts each string to lower case when checking for `o`, so either `o` or `O` matches. The length condition is strictly greater than five. The result preserves the order of matching strings.
 
-`Main` demonstrates the solution with a sample list. Its output is:
+`MonthsListTest` demonstrates the solution with a sample list. Its output is:
 
 ```text
 [Holidays, Smartphone]
