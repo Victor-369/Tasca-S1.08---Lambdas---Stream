@@ -1,0 +1,26 @@
+# Lambdas and Streams
+
+This repository contains Java exercises focused on practising lambda expressions and the Stream API.
+
+## Requirements
+
+- Java 25
+- Maven
+
+## Project structure
+
+Solutions are organised by level and exercise under `src/main/java`. Tests are under `src/test/java`.
+
+| Exercise | Description |
+| --- | --- |
+| [Level 1, Exercise 1](src/main/java/com/pruebas/proyecto/nivell1/exercici1/README.md) | Find strings containing the letter `o`. |
+
+## Build and test
+
+Compile the project and run its tests with:
+
+```bash
+mvn test
+```
+
+For details about running an individual solution, see its exercise README.
