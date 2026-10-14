@@ -12,7 +12,8 @@ public class StringsContainingLetterOTest {
     void getStringsContainingLetterO_whenStringsContainLowercaseOrUppercaseO_returnsMatchingStrings() {
         List<String> input = List.of("Hello", "WORLD", "Building", "Two");
 
-        List<String> result = StringsContainingLetterO.getStringsContainingLetterO(input);
+        StringsContainingLetterO stringsContainingLetterO = new StringsContainingLetterO(input);
+        List<String> result = stringsContainingLetterO.getStringsContainingLetterO();
 
         assertEquals(List.of("Hello", "WORLD", "Two"), result);
     }
@@ -21,7 +22,8 @@ public class StringsContainingLetterOTest {
     void getStringsContainingLetterO_whenNoStringsContainLetterO_returnsEmptyList() {
         List<String> input = List.of("Eleven", "Building", "Sky");
 
-        List<String> result = StringsContainingLetterO.getStringsContainingLetterO(input);
+        StringsContainingLetterO stringsContainingLetterO = new StringsContainingLetterO(input);
+        List<String> result = stringsContainingLetterO.getStringsContainingLetterO();
 
         assertEquals(List.of(), result);
     }
@@ -30,7 +32,8 @@ public class StringsContainingLetterOTest {
     void getStringsContainingLetterO_whenInputIsEmpty_returnsEmptyList() {
         List<String> input = List.of();
 
-        List<String> result = StringsContainingLetterO.getStringsContainingLetterO(input);
+        StringsContainingLetterO stringsContainingLetterO = new StringsContainingLetterO(input);
+        List<String> result = stringsContainingLetterO.getStringsContainingLetterO();
 
         assertEquals(List.of(), result);
     }
