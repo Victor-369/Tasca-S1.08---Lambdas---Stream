@@ -9,25 +9,25 @@ public class OperationsDemo {
     }
 
     public static void calculateAndPrintResult(String operator, float numberA, float numberB) {
-        ArithmeticOperation arithmeticOperation = (oper, operandA, operandB) -> {
-            float result = 0;
-            switch (oper) {
-                case "add" -> result = operandA + operandB;
-                case "subtract" -> result = operandA - operandB;
-                case "multiply" -> result = operandA * operandB;
-                case "divide" -> {
-                    checkZeroValue(operandB);
-                    result = operandA / operandB;
-                }
-            }
-
-            return result;
-        };
-
-        System.out.println(arithmeticOperation.operation(operator, numberA, numberB));
+        System.out.println(calculateResult(operator, numberA, numberB));
     }
 
-    private static void checkZeroValue(float operandB) {
-        if (operandB == 0) throw new IllegalArgumentException("Value must be positive");
+    public static float calculateResult(String operator, float numberA, float numberB) {
+        ArithmeticOperation arithmeticOperation = (oper, operandA, operandB) ->
+                switch (oper) {
+                    case "add" -> operandA + operandB;
+                    case "subtract" -> operandA - operandB;
+                    case "multiply" -> operandA * operandB;
+                    case "divide" -> {
+                        if (operandB == 0) {
+                            throw new IllegalArgumentException("The divisor must not be zero");
+                        }
+
+                        yield operandA / operandB;
+                    }
+                    default -> throw new IllegalArgumentException("Unsupported operator: " + oper);
+                };
+
+        return arithmeticOperation.operation(operator, numberA, numberB);
     }
 }
