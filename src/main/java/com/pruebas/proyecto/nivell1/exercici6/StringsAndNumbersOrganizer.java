@@ -10,10 +10,6 @@ public class StringsAndNumbersOrganizer {
         this.values = values;
     }
 
-    public List<Object> getValues() {
-        return values;
-    }
-
     public List<Object> getStringsOrderedByLengthThenNumbers() {
         List<Object> numbers = values.stream()
                 .filter(Number.class::isInstance)
