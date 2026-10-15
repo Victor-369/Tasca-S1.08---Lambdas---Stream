@@ -9,41 +9,41 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StringsAndNumbersOrganizerTest {
     @Test
-    void getOrderedWords_whenListContainsNumbersAndWords_ordersWordsAndPutsNumbersAtTheEnd() {
-        List<Object> input = List.of("pear", 7, "a", 2.5, "plum", "watermelon");
-        StringsAndNumbersOrganizer orderList = new StringsAndNumbersOrganizer(input);
+    void getStringsOrderedByLengthThenNumbers_whenValuesContainStringsAndNumbers_ordersStringsAndPutsNumbersAtTheEnd() {
+        List<Object> inputValues = List.of("pear", 7, "a", 2.5, "plum", "watermelon");
+        StringsAndNumbersOrganizer organizer = new StringsAndNumbersOrganizer(inputValues);
 
-        List<Object> result = orderList.getStringsOrderedByLengthThenNumbers();
+        List<Object> orderedValues = organizer.getStringsOrderedByLengthThenNumbers();
 
-        assertEquals(List.of("a", "pear", "plum", "watermelon", 7, 2.5), result);
+        assertEquals(List.of("a", "pear", "plum", "watermelon", 7, 2.5), orderedValues);
     }
 
     @Test
-    void getOrderedWords_whenListContainsOnlyWords_ordersFromShortestToLongest() {
-        List<Object> input = List.of("elephant", "a", "pear", "cat");
-        StringsAndNumbersOrganizer orderList = new StringsAndNumbersOrganizer(input);
+    void getStringsOrderedByLengthThenNumbers_whenValuesContainOnlyStrings_ordersFromShortestToLongest() {
+        List<Object> inputValues = List.of("elephant", "a", "pear", "cat");
+        StringsAndNumbersOrganizer organizer = new StringsAndNumbersOrganizer(inputValues);
 
-        List<Object> result = orderList.getStringsOrderedByLengthThenNumbers();
+        List<Object> orderedValues = organizer.getStringsOrderedByLengthThenNumbers();
 
-        assertEquals(List.of("a", "cat", "pear", "elephant"), result);
+        assertEquals(List.of("a", "cat", "pear", "elephant"), orderedValues);
     }
 
     @Test
-    void getOrderedWords_whenListContainsOnlyNumbers_preservesNumbersInOrder() {
-        List<Object> input = List.of(7, 2.5, -3);
-        StringsAndNumbersOrganizer orderList = new StringsAndNumbersOrganizer(input);
+    void getStringsOrderedByLengthThenNumbers_whenValuesContainOnlyNumbers_preservesTheirOrder() {
+        List<Object> inputValues = List.of(7, 2.5, -3);
+        StringsAndNumbersOrganizer organizer = new StringsAndNumbersOrganizer(inputValues);
 
-        List<Object> result = orderList.getStringsOrderedByLengthThenNumbers();
+        List<Object> orderedValues = organizer.getStringsOrderedByLengthThenNumbers();
 
-        assertEquals(input, result);
+        assertEquals(inputValues, orderedValues);
     }
 
     @Test
-    void getOrderedWords_whenListIsEmpty_returnsEmptyList() {
-        StringsAndNumbersOrganizer orderList = new StringsAndNumbersOrganizer(List.of());
+    void getStringsOrderedByLengthThenNumbers_whenValuesAreEmpty_returnsEmptyList() {
+        StringsAndNumbersOrganizer organizer = new StringsAndNumbersOrganizer(List.of());
 
-        List<Object> result = orderList.getStringsOrderedByLengthThenNumbers();
+        List<Object> orderedValues = organizer.getStringsOrderedByLengthThenNumbers();
 
-        assertEquals(List.of(), result);
+        assertEquals(List.of(), orderedValues);
     }
 }
