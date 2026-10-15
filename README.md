@@ -24,6 +24,7 @@ Solutions are organised by level and exercise under `src/main/java`. Tests are u
 | [Level 2, Exercise 1](src/main/java/com/pruebas/proyecto/nivell2/exercici1/README.md) | Find first names starting with uppercase `A` and containing exactly three letters. |
 | [Level 2, Exercise 2](src/main/java/com/pruebas/proyecto/nivell2/exercici2/README.md) | Prefix even and odd integers and join them into a comma-separated string. |
 | [Level 2, Exercise 3](src/main/java/com/pruebas/proyecto/nivell2/exercici3/README.md) | Perform arithmetic operations using a functional interface and a lambda. |
+| [Level 2, Exercise 4](src/main/java/com/pruebas/proyecto/nivell2/exercici4/README.md) | Sort a mixed string list, replace letters, and filter numeric strings. |
 
 ## Build and test
 
