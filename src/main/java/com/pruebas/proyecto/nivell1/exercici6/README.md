@@ -2,11 +2,13 @@
 
 ## Task
 
-Create a list containing numbers and strings, then order the strings from shortest to longest.
+Create a mixed list containing numbers and strings, sort the strings lexicographically and the numbers in ascending numeric order, 
+and return the strings followed by the numbers.
 
 ## Solution
 
-`StringsAndNumbersOrganizer.getStringsOrderedByLengthThenNumbers` uses the Stream API to separate strings from numbers. It sorts the strings by length in ascending order, then appends the numbers in their original order. The returned list contains the sorted strings followed by the numbers.
+`StringsAndNumbersOrganizer.getStringsOrderedByLengthThenNumbers` separates strings from numbers with the Stream API. 
+It sorts strings lexicographically and compares the numbers by numeric value (using their string representations to create `BigDecimal` values, rather than comparing them lexicographically). The result contains the sorted strings followed by the sorted numbers.
 
 `Main` demonstrates the solution with this input:
 
@@ -17,7 +19,7 @@ Create a list containing numbers and strings, then order the strings from shorte
 The output is:
 
 ```text
-[city, house, computer, 10, 4, 80]
+[city, computer, house, 4, 10, 80]
 ```
 
 ## Run
@@ -33,9 +35,9 @@ java -cp target/classes com.pruebas.proyecto.nivell1.exercici6.Main
 
 The JUnit tests check that the method:
 
-- sorts strings by length and places numbers at the end;
+- sorts strings lexicographically and numbers numerically, then places numbers after the strings;
 - sorts a list containing only strings;
-- preserves the order of numbers when there are no strings;
+- sorts a list containing only numbers;
 - returns an empty list for empty input.
 
 Run the test suite from the project root with:

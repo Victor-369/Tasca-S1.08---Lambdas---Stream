@@ -18,7 +18,7 @@ Solutions are organised by level and exercise under `src/main/java`. Tests are u
 | [Level 1, Exercise 3](src/main/java/com/pruebas/proyecto/nivell1/exercici3/README.md) | Print the names of the months using a lambda. |
 | [Level 1, Exercise 4](src/main/java/com/pruebas/proyecto/nivell1/exercici4/README.md) | Print the names of the months using a method reference. |
 | [Level 1, Exercise 5](src/main/java/com/pruebas/proyecto/nivell1/exercici5/README.md) | Define a functional interface that returns and prints the value of pi. |
-| [Level 1, Exercise 6](src/main/java/com/pruebas/proyecto/nivell1/exercici6/README.md) | Sort strings by length and place numbers afterwards. |
+| [Level 1, Exercise 6](src/main/java/com/pruebas/proyecto/nivell1/exercici6/README.md) | Sort strings lexicographically and numbers numerically in ascending order. |
 | [Level 1, Exercise 7](src/main/java/com/pruebas/proyecto/nivell1/exercici7/README.md) | Sort strings by length in reverse order and place numbers afterwards. |
 | [Level 1, Exercise 8](src/main/java/com/pruebas/proyecto/nivell1/exercici8/README.md) | Reverse a string using a functional interface and a lambda. |
 | [Level 2, Exercise 1](src/main/java/com/pruebas/proyecto/nivell2/exercici1/README.md) | Find first names starting with uppercase `A` and containing exactly three letters. |
