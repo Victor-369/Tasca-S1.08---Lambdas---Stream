@@ -2,11 +2,13 @@
 
 ## Task
 
-Using the list from the previous exercise, order the strings in reverse length order, from longest to shortest.
+Using the list from the previous exercise, order the strings by length from longest to shortest and the numbers numerically in descending order.
 
 ## Solution
 
-`StringsAndNumbersOrganizerReversed.getStringsReversedOrderedByLengthThenNumbers` uses the Stream API to separate strings from numbers. It sorts the strings by length in descending order, then appends the numbers in their original order. The returned list contains the ordered strings followed by the numbers.
+`StringsAndNumbersOrganizerReversed.getStringsReversedOrderedByLengthThenNumbers` uses the Stream API to separate strings from numbers. 
+It sorts the strings by length in descending order and the numbers by numeric value in descending order. The returned list contains 
+the ordered strings followed by the ordered numbers.
 
 `Main` demonstrates the solution with this input:
 
@@ -17,7 +19,7 @@ Using the list from the previous exercise, order the strings in reverse length o
 The output is:
 
 ```text
-[computer, house, city, 10, 4, 80]
+[computer, house, city, 80, 10, 4]
 ```
 
 ## Run
@@ -33,9 +35,9 @@ java -cp target/classes com.pruebas.proyecto.nivell1.exercici7.Main
 
 The JUnit tests check that the method:
 
-- sorts strings from longest to shortest and places numbers at the end;
+- sorts strings from longest to shortest and numbers numerically in descending order at the end;
 - sorts a list containing only strings in descending length order;
-- preserves the order of numbers when there are no strings;
+- sorts a list containing only numbers numerically in descending order;
 - returns an empty list for empty input.
 
 Run the test suite from the project root with:
