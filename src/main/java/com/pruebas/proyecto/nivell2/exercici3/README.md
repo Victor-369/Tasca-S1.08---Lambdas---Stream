@@ -2,11 +2,14 @@
 
 ## Task
 
-Create a functional interface whose method returns a `float`. Use a lambda to provide an implementation that can perform addition, subtraction, multiplication and division.
+Create a functional interface whose method accepts only two numbers and returns a `float`. Implement addition, subtraction, 
+multiplication and division as separate lambda expressions.
 
 ## Solution
 
-`ArithmeticOperation` is the functional interface used by `OperationsDemo`. Its lambda selects the requested arithmetic operation and returns the result. `calculateResult` performs the calculation, while `calculateAndPrintResult` prints it. Unsupported operators and division by zero are reported with `IllegalArgumentException`.
+`ArithmeticOperation` accepts only `numberA` and `numberB`; it has no operator argument. `OperationsDemo` defines a separate 
+lambda for each operation and passes the selected implementation to `calculateResult` or `calculateAndPrintResult`. 
+Division by zero is reported with `IllegalArgumentException`.
 
 ## Run
 
@@ -19,7 +22,7 @@ java -cp target/classes com.pruebas.proyecto.nivell2.exercici3.OperationsDemo
 
 ## Tests
 
-The JUnit tests cover all four arithmetic operations, division by zero and unsupported operators. Run them from the project root with:
+The JUnit tests cover all four arithmetic operations and division by zero. Run them from the project root with:
 
 ```bash
 mvn test
