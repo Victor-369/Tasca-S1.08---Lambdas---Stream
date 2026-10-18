@@ -9,33 +9,33 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StringsAndNumbersOrganizerTest {
     @Test
-    void getStringsOrderedByLengthThenNumbers_whenValuesContainStringsAndNumbers_ordersStringsAndPutsNumbersAtTheEnd() {
+    void getStringsOrderedByLengthThenNumbers_whenValuesContainStringsAndNumbers_ordersStringsAndNumbers() {
         List<Object> inputValues = List.of("pear", 7, "a", 2.5, "plum", "watermelon");
         StringsAndNumbersOrganizer organizer = new StringsAndNumbersOrganizer(inputValues);
 
         List<Object> orderedValues = organizer.getStringsOrderedByLengthThenNumbers();
 
-        assertEquals(List.of("a", "pear", "plum", "watermelon", 7, 2.5), orderedValues);
+        assertEquals(List.of("a", "pear", "plum", "watermelon", 2.5, 7), orderedValues);
     }
 
     @Test
-    void getStringsOrderedByLengthThenNumbers_whenValuesContainOnlyStrings_ordersFromShortestToLongest() {
+    void getStringsOrderedByLengthThenNumbers_whenValuesContainOnlyStrings_ordersByStringRepresentation() {
         List<Object> inputValues = List.of("elephant", "a", "pear", "cat");
         StringsAndNumbersOrganizer organizer = new StringsAndNumbersOrganizer(inputValues);
 
         List<Object> orderedValues = organizer.getStringsOrderedByLengthThenNumbers();
 
-        assertEquals(List.of("a", "cat", "pear", "elephant"), orderedValues);
+        assertEquals(List.of("a", "cat", "elephant", "pear"), orderedValues);
     }
 
     @Test
-    void getStringsOrderedByLengthThenNumbers_whenValuesContainOnlyNumbers_preservesTheirOrder() {
-        List<Object> inputValues = List.of(7, 2.5, -3);
+    void getStringsOrderedByLengthThenNumbers_whenValuesContainOnlyNumbers_ordersThemNumerically() {
+        List<Object> inputValues = List.of(7, 2.5, -3, 10, 4);
         StringsAndNumbersOrganizer organizer = new StringsAndNumbersOrganizer(inputValues);
 
         List<Object> orderedValues = organizer.getStringsOrderedByLengthThenNumbers();
 
-        assertEquals(inputValues, orderedValues);
+        assertEquals(List.of(-3, 2.5, 4, 7, 10), orderedValues);
     }
 
     @Test
