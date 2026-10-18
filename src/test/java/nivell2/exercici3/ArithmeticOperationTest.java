@@ -11,38 +11,32 @@ class ArithmeticOperationTest {
 
     @Test
     void calculateResult_whenAddingNumbers_returnsTheirSum() {
-        assertEquals(6.0f, OperationsDemo.calculateResult("add", 3, 3), DELTA);
+        assertEquals(6.0f, OperationsDemo.calculateResult(OperationsDemo.ADD, 3, 3), DELTA);
     }
 
     @Test
     void calculateResult_whenSubtractingNumbers_returnsTheirDifference() {
-        assertEquals(-2.0f, OperationsDemo.calculateResult("subtract", 3, 5), DELTA);
+        assertEquals(-2.0f, OperationsDemo.calculateResult(OperationsDemo.SUBTRACT, 3, 5), DELTA);
     }
 
     @Test
     void calculateResult_whenMultiplyingNumbers_returnsTheirProduct() {
-        assertEquals(12.0f, OperationsDemo.calculateResult("multiply", 3, 4), DELTA);
+        assertEquals(12.0f, OperationsDemo.calculateResult(OperationsDemo.MULTIPLY, 3, 4), DELTA);
     }
 
     @Test
     void calculateResult_whenDividingNumbers_returnsTheirQuotient() {
-        assertEquals(1.5f, OperationsDemo.calculateResult("divide", 3, 2), DELTA);
+        assertEquals(1.5f, OperationsDemo.calculateResult(OperationsDemo.DIVIDE, 3, 2), DELTA);
     }
 
     @Test
     void calculateResult_whenDividingByNegativeNumber_returnsNegativeQuotient() {
-        assertEquals(-1.5f, OperationsDemo.calculateResult("divide", 3, -2), DELTA);
+        assertEquals(-1.5f, OperationsDemo.calculateResult(OperationsDemo.DIVIDE, 3, -2), DELTA);
     }
 
     @Test
     void calculateResult_whenDividingByZero_throwsIllegalArgumentException() {
         assertThrows(IllegalArgumentException.class,
-                () -> OperationsDemo.calculateResult("divide", 3, 0));
-    }
-
-    @Test
-    void calculateResult_whenOperatorIsUnsupported_throwsIllegalArgumentException() {
-        assertThrows(IllegalArgumentException.class,
-                () -> OperationsDemo.calculateResult("modulo", 3, 2));
+                () -> OperationsDemo.calculateResult(OperationsDemo.DIVIDE, 3, 0));
     }
 }
