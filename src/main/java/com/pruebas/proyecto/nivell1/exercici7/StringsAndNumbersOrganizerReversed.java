@@ -1,5 +1,6 @@
 package com.pruebas.proyecto.nivell1.exercici7;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,6 +14,8 @@ public class StringsAndNumbersOrganizerReversed {
     public List<Object> getStringsReversedOrderedByLengthThenNumbers() {
         List<Object> numbers = values.stream()
                 .filter(Number.class::isInstance)
+                .sorted((first, second) -> new BigDecimal(second.toString())
+                        .compareTo(new BigDecimal(first.toString())))
                 .toList();
 
         List<Object> stringsByLength = values.stream()
